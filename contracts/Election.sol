@@ -21,9 +21,31 @@ contract Election {
         uint indexed _candidateId
     );
 
+  /*  constructor (string names) public {
+        //addCandidate("Candidate 1");
+        //addCandidate("Candidate 2");
+      bytes memory b=bytes(names);
+      uint ll=10;
+      bytes memory c=new bytes(ll);
+      uint k=0;                                                
+      for(uint i=0;i<b.length;i++){
+          if(b[i]==47){
+              addCandidate(string(c));
+              k=0;
+              c=new bytes(ll);
+          }
+          else{
+              c[k++]=b[i];
+          }
+      }
+        
+    }*/
     constructor () public {
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+        addCandidate("Prathap");
+        addCandidate("Mithul");
+        addCandidate("Ajith");
+        addCandidate("Suma");
+        addCandidate("Ram");
     }
 
     function addCandidate (string _name) private {

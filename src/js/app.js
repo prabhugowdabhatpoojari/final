@@ -42,8 +42,8 @@ App = {
       // This is a known issue with Metamask
       // https://github.com/MetaMask/metamask-extension/issues/2393
       instance.votedEvent({}, {
-        fromBlock: 0,
-        toBlock: 'latest'
+        //fromBlock: '0',
+        //toBlock:'latest'
       }).watch(function(error, event) {
         console.log("event triggered", event)
         // Reload when a new vote is recorded
@@ -84,7 +84,6 @@ App = {
           var id = candidate[0];
           var name = candidate[1];
           var voteCount = candidate[2];
-
           // Render candidate Result
           var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
           candidatesResults.append(candidateTemplate);
@@ -126,3 +125,10 @@ $(function() {
     App.init();
   });
 });
+
+
+
+
+
+
+

@@ -2,8 +2,8 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   line-height: 1.42em;
-  color:#A7A1AE;
-  background-color:#1F2739;
+  color:black;
+  background-color: #FFE4C4;
 }
 h1{
   font-size:3em; 
@@ -12,18 +12,18 @@ h1{
   text-align: center;
   color: #4DC3FA;
 }
-.blue { color: #185875; }
+.blue { color: #111; }
 .container th h1 {
     font-weight: bold;
     font-size: 1em;
   text-align: left;
-  color: #185875;
+  color: #DEB887;
 }
 .container th h1 {
     font-weight: bold;
     font-size: 1em;
   text-align: left;
-  color: #185875;
+  color: #DEB887;
 }
 
 .container td {
@@ -51,31 +51,31 @@ h1{
 
 /* Background-color of the odd rows */
 .container tr:nth-child(odd) {
-    background-color: #323C50;
+    background-color: #DEB887;
 }
 
 /* Background-color of the even rows */
 .container tr:nth-child(even) {
-    background-color: #2C3446;
+    background-color: #DEB887;
 }
 
 .container th {
-    background-color: #1F2739;
+    background-color: #DEB887;
 }
 
 .container td:first-child { color: #FB667A; }
 
 .container tr:hover {
-   background-color: #464A52;
+   background-color:#fff8dc;
 -webkit-box-shadow: 0 6px 6px -6px #0E1119;
      -moz-box-shadow: 0 6px 6px -6px #0E1119;
           box-shadow: 0 6px 6px -6px #0E1119;
 }
 
-.container td:hover {
-  background-color: #FFF842;
-  color: #403E10;
-  font-weight: bold;
+.container td:hover  {
+  background-color: black;
+  color: white;
+ /* font-weight: ;*/
   
   box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
   transform: translate3d(6px, -6px, 0);
@@ -108,7 +108,7 @@ h1{
   
 }
 select{
-    background: #111;
+    background: #DEB887;
   border: 1px solid #191919;
   border-radius: .4em;
   bottom: 0;
@@ -121,11 +121,11 @@ select{
   right: 0;
   top: 0;
   width: 300px;
-  color: gray;
+  color: black;
   text-align: center;
 }
 label{
-  background: #111;
+  background: #DEB887;
   border: 1px solid #191919;
   border-radius: .4em;
   bottom: 0;
@@ -139,13 +139,14 @@ label{
   top: 0;
   width: 300px;
   text-align: center;
-  color:lightgray;
+  color:black;
 }
+
 .btn{
     display: inline-block;
     text-decoration: none;
-    background: #5dc3d0;
-    color: rgb(82, 142, 150);
+    background: #FFDEAD;
+    color: black;
     width: 100px;
     font-size: 20px;
     height: 100px;
@@ -156,7 +157,7 @@ label{
     overflow: hidden;
     box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
     font-weight: bold;
-    border-bottom: solid 3px #549fa9;
+    border-bottom: #FFF8DC;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
     transition: .4s;
 }
@@ -170,4 +171,5 @@ label{
 }
 p{
   text-align: center;
+  color: black;
 }

@@ -7,6 +7,91 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Election Results</title>
     <link href="css/style.css" rel="stylesheet">
+    <!--<script>
+      window.onload = function() {
+    if(!window.location.hash) {
+        window.location.hash= window.location + '#loaded';
+        window.location.reload();
+        console.log("reload");
+    }
+}
+
+    </script>-->
+
+
+
+    <script type="text/javascript">
+      if(window.location.href=="http://localhost:3000/#h")
+        window.location="http://localhost:3000";
+   /* (function()
+{
+  if( window.localStorage )
+    //localStorage['firstLoad']=0
+  {
+    if( localStorage.getItem( 'firstLoad' )==0 )
+    {
+      localStorage[ 'firstLoad' ] = 1;
+      localStorage[ 'second' ] = 0;
+      window.location.reload();
+    }  
+
+    else if(localStorage.getItem('second')==0)
+      {
+      localStorage[ 'second' ] = 1;
+      localStorage[ 'firstLoad' ] = 0;
+      window.location.reload();
+    }
+  }
+})();*/
+
+
+
+/*
+$(document).ready(function(){    
+    //Check if the current URL contains '# or hash'
+    if(document.URL.indexOf("#")==-1){
+        // Set the URL to whatever it was plus "#loaded".
+        url = document.URL+"#loaded";
+        location = "#loaded";
+        //Reload the page using reload() method
+        location.reload(true);
+    }
+});*/
+
+
+
+      var countDownDate = new Date("Apr 29, 20206:45:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML =  hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+   // document.getElementById("demo").innerHTML = "EXPIRED";
+    location.replace("index2.html")
+  }
+}, 1000);
+    </script>
+
+
+
 
     <!-- Bootstrap -->
     <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
@@ -25,7 +110,7 @@
           <h1 class="blue">Election Results</h1>
          
           <div id="loader">
-            <p class="text-center">Loading...</p>
+            <p class="text-center">Loadin...</p>
           </div>
           <div id="content" style="display: none;">
             <table class="container">
@@ -42,14 +127,21 @@
             <br>
             <form onSubmit="App.castVote(); return false;">
               <div class="form-group">
+                <br/>
                 <label for="candidatesSelect">Select Candidate</label>
                 <select class="form-control" id="candidatesSelect">
                 </select>
               </div>
+              <br>
               <center>
               <button type="submit" class="btn">Vote</button>
+              <br>
+              
               </center>
             </form>
+            <div>
+                <p id="demo"></p>
+              </div>
             <p id="accountAddress" class="text-center"></p>
           </div>
         </div>
@@ -62,5 +154,6 @@
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
+    <a href="index2.html">back</a>
   </body>
 </html>
