@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Election Results</title>
@@ -19,7 +19,8 @@
     </script>-->
 
 
-
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script type="text/javascript">
       if(window.location.href=="http://localhost:3000/#h")
         window.location="http://localhost:3000";
@@ -60,7 +61,7 @@ $(document).ready(function(){
 
 
 
-      var countDownDate = new Date("Apr 29, 20206:45:25").getTime();
+      var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -89,8 +90,11 @@ var x = setInterval(function() {
   }
 }, 1000);
     </script>
-
-
+    <script type="text/javascript">
+      
+    </script>
+      
+      
 
 
     <!-- Bootstrap -->
@@ -110,7 +114,7 @@ var x = setInterval(function() {
           <h1 class="blue">Election Results</h1>
          
           <div id="loader">
-            <p class="text-center">Loadin...</p>
+            <p class="text-center">Loading...</p>
           </div>
           <div id="content" style="display: none;">
             <table class="container">
@@ -132,6 +136,7 @@ var x = setInterval(function() {
                 <select class="form-control" id="candidatesSelect">
                 </select>
               </div>
+              
               <br>
               <center>
               <button type="submit" class="btn">Vote</button>
@@ -140,7 +145,7 @@ var x = setInterval(function() {
               </center>
             </form>
             <div>
-                <p id="demo"></p>
+               <!-- <p id="demo"></p>-->
               </div>
             <p id="accountAddress" class="text-center"></p>
           </div>
@@ -154,6 +159,9 @@ var x = setInterval(function() {
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="js/app.js"></script>
-    <a href="index2.html">back</a>
+
+
+    <!--<a href="index2.html">back</a>
+    <button  class="btn"onclick="load()">Loads </button>-->
   </body>
 </html>

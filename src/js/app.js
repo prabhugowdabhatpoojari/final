@@ -42,7 +42,7 @@ App = {
       // This is a known issue with Metamask
       // https://github.com/MetaMask/metamask-extension/issues/2393
       instance.votedEvent({}, {
-        //fromBlock: '0',
+        //fromBlock: 'latest',
         //toBlock:'latest'
       }).watch(function(error, event) {
         console.log("event triggered", event)
@@ -56,9 +56,9 @@ App = {
     var electionInstance;
     var loader = $("#loader");
     var content = $("#content");
-
     loader.show();
     content.hide();
+    
 
     // Load account data
     web3.eth.getCoinbase(function(err, account) {
@@ -93,14 +93,43 @@ App = {
           candidatesSelect.append(candidateOption);
         });
       }
+
+      
+      //location.reload();
+       /*
+        if($("#candidatesResults > tr").length>5)
+          {
+              location.reload();
+          }*/
+    
+          function load(){
+                $(document).ready(function(){
+        //var matched = $("#candidatesResults tr");
+        
+        //alert("Number of paragraphs in content div = " + $("#candidatesResults > tr").length);
+        
+        if($("#candidatesResults > tr").length>5)
+          {
+              location.reload();
+          }
+          //location.reload();
+          else{
+          loader.hide();
+          content.show();
+        }
+    });
+
+    }
+    setTimeout(load, 650);
+    
       return electionInstance.voters(App.account);
     }).then(function(hasVoted) {
       // Do not allow a user to vote
       if(hasVoted) {
         $('form').hide();
       }
-      loader.hide();
-      content.show();
+     // loader.hide();
+      //content.show();
     }).catch(function(error) {
       console.warn(error);
     });
