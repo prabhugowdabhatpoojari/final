@@ -21,7 +21,7 @@ contract Election {
         uint indexed _candidateId
     );
 
-  /*  constructor (string names) public {
+   constructor (string names) public {
         //addCandidate("Candidate 1");
         //addCandidate("Candidate 2");
       bytes memory b=bytes(names);
@@ -39,7 +39,8 @@ contract Election {
           }
       }
         
-    }*/
+    }
+    /*
     constructor () public {
         addCandidate("Prathap");
         addCandidate("Mithul");
@@ -47,7 +48,7 @@ contract Election {
         addCandidate("Suma");
         addCandidate("Ram");
     }
-
+*/
     function addCandidate (string _name) private {
         candidatesCount ++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
